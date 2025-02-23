@@ -1,23 +1,25 @@
 const theme = {
   colors: {
-    primary: '#007bff',
-    secondary: '#6c757d',
-    accent: '#ffc107',
+    primary: '#FFD166', // Amarelo Sol
+    secondary: '#A8DADC', // Azul Claro
+    accent: '#FF007F', // Rosa Choque
     success: '#28a745',
     error: '#dc3545',
-    background: '#ffffff',
-    text: '#212529',
-    lightText: '#6c757d',
-    darkText: '#343a40',
-    border: '#dee2e6',
-    lightBorder: '#e9ecef',
-    darkBorder: '#ced4da',
+    background: '#FFFFFF', // Branco
+    darkBackground: '#000000', // Preto
+    text: '#000000', // Preto para contraste
+    lightText: '#A8DADC', // Azul Claro
+    darkText: '#000000', // Preto
+    border: '#FFD166', // Amarelo Sol
+    lightBorder: '#A8DADC', // Azul Claro
+    darkBorder: '#000000', // Preto
   },
   
   typography: {
     fontFamily: {
-      primary: "'Inter', sans-serif",
-      secondary: "'Poppins', sans-serif",
+      primary: "'Poiret One', cursive",
+      secondary: "'Poiret One', cursive",
+      tertiary: "'Poiret One', cursive"
     },
     fontSize: {
       xs: '0.75rem',
@@ -29,6 +31,7 @@ const theme = {
       '3xl': '1.875rem',
       '4xl': '2.25rem',
       '5xl': '3rem',
+      '6xl': '4rem',
     },
     fontWeight: {
       light: 300,
@@ -37,6 +40,13 @@ const theme = {
       semibold: 600,
       bold: 700,
     },
+    lineHeight: {
+      none: 1,
+      tight: 1.25,
+      normal: 1.5,
+      relaxed: 1.75,
+      loose: 2,
+    }
   },
 
   breakpoints: {
@@ -54,9 +64,12 @@ const theme = {
     xl: '2rem',
     '2xl': '2.5rem',
     '3xl': '3rem',
+    '4xl': '4rem',
+    '5xl': '6rem',
   },
 
   shadows: {
+    none: 'none',
     sm: '0 1px 2px rgba(0, 0, 0, 0.05)',
     md: '0 4px 6px rgba(0, 0, 0, 0.1)',
     lg: '0 10px 15px rgba(0, 0, 0, 0.1)',
@@ -70,6 +83,7 @@ const theme = {
   },
 
   borderRadius: {
+    none: '0',
     sm: '0.25rem',
     md: '0.5rem',
     lg: '1rem',
@@ -86,6 +100,32 @@ const theme = {
     popover: 1050,
     tooltip: 1060,
   },
+  
+  buttons: {
+    primary: {
+      background: '#FFD166',
+      color: '#000000',
+      hoverBackground: '#FF007F',
+      hoverColor: '#FFFFFF',
+      borderRadius: '0',
+      padding: '15px 50px',
+      fontSize: '15px',
+      textTransform: 'uppercase',
+      transition: '0.3s ease'
+    },
+    secondary: {
+      background: 'transparent',
+      color: '#000000',
+      border: '2px solid #FFD166',
+      hoverBackground: '#FFD166',
+      hoverColor: '#000000',
+      borderRadius: '0',
+      padding: '15px 50px',
+      fontSize: '15px',
+      textTransform: 'uppercase',
+      transition: '0.3s ease'
+    }
+  }
 };
 
 export default theme;

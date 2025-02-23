@@ -3,15 +3,16 @@ import { motion } from 'framer-motion';
 
 export const GalleryContainer = styled.section`
   padding: ${({ theme }) => theme.spacing['3xl']} ${({ theme }) => theme.spacing.xl};
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: rgb(240, 248, 250);
 `;
 
 export const SectionTitle = styled.h2`
   text-align: center;
   font-size: ${({ theme }) => theme.typography.fontSize['4xl']};
-  font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.typography.fontSize['3xl']};
@@ -23,8 +24,10 @@ export const GalleryDescription = styled.p`
   max-width: 800px;
   margin: 0 auto ${({ theme }) => theme.spacing['3xl']};
   font-size: ${({ theme }) => theme.typography.fontSize.xl};
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.text};
   line-height: 1.6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.typography.fontSize.lg};
@@ -95,7 +98,8 @@ export const ImageOverlay = styled.div`
 export const ImageCategory = styled.span`
   color: ${({ theme }) => theme.colors.background};
   font-size: ${({ theme }) => theme.typography.fontSize.lg};
-  font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
+  font-weight: 300;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 `;
 
 export const Modal = styled(motion.div)`
@@ -137,6 +141,7 @@ export const ModalClose = styled.button`
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
   font-size: ${({ theme }) => theme.typography.fontSize['2xl']};
+  font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,8 +160,10 @@ export const ModalCaption = styled.div`
   padding: ${({ theme }) => theme.spacing.lg};
   text-align: center;
   font-size: ${({ theme }) => theme.typography.fontSize.lg};
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.text};
   background-color: ${({ theme }) => theme.colors.background};
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 `;
 
 export const ViewMoreButton = styled(motion.button)`
@@ -166,11 +173,12 @@ export const ViewMoreButton = styled(motion.button)`
   color: ${({ theme }) => theme.colors.background};
   padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing['2xl']};
   border-radius: ${({ theme }) => theme.borderRadius.md};
-  font-weight: ${({ theme }) => theme.typography.fontWeight.semibold};
+  font-weight: 300;
   cursor: pointer;
   border: none;
   transition: all ${({ theme }) => theme.transitions.default};
   box-shadow: ${({ theme }) => theme.shadows.md};
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.secondary};

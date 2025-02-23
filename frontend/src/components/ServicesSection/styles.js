@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const ServicesContainer = styled.section`
   padding: ${({ theme }) => theme.spacing['4xl']} ${({ theme }) => theme.spacing.xl};
-  background-color: #f8f9fa;
+  background-color: rgb(240, 248, 250);
   position: relative;
   z-index: 1;
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
@@ -13,9 +13,10 @@ export const ServicesContainer = styled.section`
 export const SectionTitle = styled.h2`
   text-align: center;
   font-size: ${({ theme }) => theme.typography.fontSize['4xl']};
-  font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.typography.fontSize['3xl']};
@@ -27,8 +28,10 @@ export const ServicesDescription = styled.p`
   max-width: 800px;
   margin: 0 auto ${({ theme }) => theme.spacing['3xl']};
   font-size: ${({ theme }) => theme.typography.fontSize.xl};
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.text};
   line-height: 1.6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.typography.fontSize.lg};
@@ -89,10 +92,11 @@ export const ServiceIcon = styled.div`
 
 export const ServiceTitle = styled.h3`
   font-size: ${({ theme }) => theme.typography.fontSize['2xl']};
-  font-weight: ${({ theme }) => theme.typography.fontWeight.semibold};
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: ${({ theme }) => theme.spacing.lg};
   transition: all ${({ theme }) => theme.transitions.slow};
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 
   ${ServiceCard}:hover & {
     color: ${({ theme }) => theme.colors.accent};
@@ -101,10 +105,12 @@ export const ServiceTitle = styled.h3`
 
 export const ServiceDescription = styled.p`
   font-size: ${({ theme }) => theme.typography.fontSize.base};
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.text};
   line-height: 1.6;
   margin-bottom: ${({ theme }) => theme.spacing['3xl']};
   flex-grow: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 `;
 
 export const LearnMoreButton = styled(motion.button)`
@@ -113,7 +119,7 @@ export const LearnMoreButton = styled(motion.button)`
   border: 2px solid ${({ theme }) => theme.colors.primary};
   padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.xl};
   border-radius: ${({ theme }) => theme.borderRadius.md};
-  font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
+  font-weight: 300;
   cursor: pointer;
   transition: all ${({ theme }) => theme.transitions.default};
 
@@ -133,8 +139,10 @@ export const ContactInfo = styled.div`
 
   p {
     font-size: ${({ theme }) => theme.typography.fontSize.xl};
+    font-weight: 300;
     color: ${({ theme }) => theme.colors.text};
     margin-bottom: ${({ theme }) => theme.spacing.lg};
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
 `;
 
@@ -143,7 +151,7 @@ export const ContactButton = styled(motion.button)`
   color: ${({ theme }) => theme.colors.background};
   padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing['2xl']};
   border-radius: ${({ theme }) => theme.borderRadius.md};
-  font-weight: ${({ theme }) => theme.typography.fontWeight.semibold};
+  font-weight: 300;
   cursor: pointer;
   border: none;
   transition: all ${({ theme }) => theme.transitions.default};

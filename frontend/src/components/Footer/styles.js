@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const FooterContainer = styled.footer`
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.background};
+  background-color: rgb(240, 248, 250);
+  color: ${({ theme }) => theme.colors.text};
   padding: ${({ theme }) => theme.spacing['3xl']} 0 0;
 `;
 
@@ -33,20 +33,26 @@ export const FooterSection = styled(motion.div)`
 
 export const FooterLogo = styled.h3`
   font-size: ${({ theme }) => theme.typography.fontSize['2xl']};
-  font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
-  color: ${({ theme }) => theme.colors.background};
+  font-weight: 300;
+  color: ${({ theme }) => theme.colors.primary};
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `;
 
 export const FooterDescription = styled.p`
   font-size: ${({ theme }) => theme.typography.fontSize.base};
+  font-weight: 300;
   line-height: 1.6;
   opacity: 0.9;
+  color: ${({ theme }) => theme.colors.text};
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 `;
 
 export const FooterTitle = styled.h4`
   font-size: ${({ theme }) => theme.typography.fontSize.xl};
-  font-weight: ${({ theme }) => theme.typography.fontWeight.semibold};
+  font-weight: 300;
   margin-bottom: ${({ theme }) => theme.spacing.md};
+  color: ${({ theme }) => theme.colors.primary};
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `;
 
 export const ContactList = styled.ul`
@@ -60,10 +66,14 @@ export const ContactItem = styled.li`
   align-items: center;
   gap: ${({ theme }) => theme.spacing.md};
   font-size: ${({ theme }) => theme.typography.fontSize.base};
+  font-weight: 300;
+  color: ${({ theme }) => theme.colors.text};
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 `;
 
 export const ContactIcon = styled.span`
   font-size: ${({ theme }) => theme.typography.fontSize.xl};
+  color: ${({ theme }) => theme.colors.primary};
 `;
 
 export const FooterLinks = styled.div`
@@ -73,15 +83,18 @@ export const FooterLinks = styled.div`
 `;
 
 export const FooterLink = styled.a`
-  color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
   text-decoration: none;
   font-size: ${({ theme }) => theme.typography.fontSize.base};
+  font-weight: 300;
   transition: opacity ${({ theme }) => theme.transitions.default};
   opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 
   &:hover {
     opacity: 1;
     text-decoration: underline;
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
@@ -91,28 +104,34 @@ export const SocialLinks = styled.div`
 `;
 
 export const SocialLink = styled(motion.a)`
-  color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.primary};
   text-decoration: none;
   font-size: ${({ theme }) => theme.typography.fontSize.base};
+  font-weight: 300;
   padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.md};
-  border: 1px solid ${({ theme }) => theme.colors.background};
+  border: 1px solid ${({ theme }) => theme.colors.primary};
   border-radius: ${({ theme }) => theme.borderRadius.md};
   transition: all ${({ theme }) => theme.transitions.default};
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.background};
+    text-shadow: none;
   }
 `;
 
 export const FooterBottom = styled.div`
-  border-top: 1px solid ${({ theme }) => `${theme.colors.background}30`};
+  border-top: 1px solid ${({ theme }) => `${theme.colors.primary}30`};
   padding: ${({ theme }) => theme.spacing.xl} 0;
   text-align: center;
-  background-color: ${({ theme }) => `${theme.colors.primary}90`};
+  background-color: rgb(240, 248, 250);
 `;
 
 export const Copyright = styled.p`
   font-size: ${({ theme }) => theme.typography.fontSize.sm};
+  font-weight: 300;
   opacity: 0.9;
+  color: ${({ theme }) => theme.colors.text};
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 `;
