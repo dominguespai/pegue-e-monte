@@ -9,10 +9,11 @@ export const TestimonialsContainer = styled.section`
 export const SectionTitle = styled.h2`
   text-align: center;
   font-size: ${({ theme }) => theme.typography.fontSize['4xl']};
-  font-weight: 300;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.typography.fontSize['3xl']};
@@ -24,10 +25,10 @@ export const TestimonialsDescription = styled.p`
   max-width: 800px;
   margin: 0 auto ${({ theme }) => theme.spacing['3xl']};
   font-size: ${({ theme }) => theme.typography.fontSize.xl};
-  font-weight: 300;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.text};
   line-height: 1.6;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.typography.fontSize.lg};
@@ -73,13 +74,13 @@ export const QuoteIcon = styled.span`
 
 export const TestimonialText = styled.p`
   font-size: ${({ theme }) => theme.typography.fontSize.xl};
-  font-weight: 300;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.text};
   line-height: 1.6;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
   position: relative;
   z-index: 1;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.typography.fontSize.lg};
@@ -92,17 +93,18 @@ export const TestimonialAuthor = styled.div`
 
 export const AuthorName = styled.h4`
   font-size: ${({ theme }) => theme.typography.fontSize.lg};
-  font-weight: 300;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
 `;
 
 export const EventType = styled.p`
-  font-size: ${({ theme }) => theme.typography.fontSize.base};
-  font-weight: 300;
+  font-size: ${({ theme }) => theme.typography.fontSize.lg};
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.lightText};
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
 `;
 
 export const SliderControls = styled.div`
@@ -114,9 +116,8 @@ export const SliderControls = styled.div`
 `;
 
 export const SliderButton = styled.button`
-  background-color: transparent;
-  border: 2px solid ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.darkBackground};
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -125,12 +126,16 @@ export const SliderButton = styled.button`
   justify-content: center;
   cursor: pointer;
   font-size: ${({ theme }) => theme.typography.fontSize.xl};
-  font-weight: 300;
-  transition: all ${({ theme }) => theme.transitions.default};
+  font-weight: 600;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.accent};
+    transform: translateY(-2px);
   }
 `;
 

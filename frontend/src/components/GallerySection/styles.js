@@ -9,10 +9,11 @@ export const GalleryContainer = styled.section`
 export const SectionTitle = styled.h2`
   text-align: center;
   font-size: ${({ theme }) => theme.typography.fontSize['4xl']};
-  font-weight: 300;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+  letter-spacing: 0.5px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.typography.fontSize['3xl']};
@@ -24,10 +25,10 @@ export const GalleryDescription = styled.p`
   max-width: 800px;
   margin: 0 auto ${({ theme }) => theme.spacing['3xl']};
   font-size: ${({ theme }) => theme.typography.fontSize.xl};
-  font-weight: 300;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.text};
   line-height: 1.6;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.typography.fontSize.lg};
@@ -95,92 +96,93 @@ export const ImageOverlay = styled.div`
   }
 `;
 
-export const ImageCategory = styled.span`
-  color: ${({ theme }) => theme.colors.background};
-  font-size: ${({ theme }) => theme.typography.fontSize.lg};
-  font-weight: 300;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+export const ImageTitle = styled.h3`
+  font-size: ${({ theme }) => theme.typography.fontSize.xl};
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.primary};
+  margin-bottom: ${({ theme }) => theme.spacing.sm};
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
 `;
 
-export const Modal = styled(motion.div)`
+export const ImageDescription = styled.p`
+  font-size: ${({ theme }) => theme.typography.fontSize.base};
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.background};
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+`;
+
+export const Modal = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: ${({ theme }) => theme.zIndex.modal};
-  padding: ${({ theme }) => theme.spacing.xl};
+  z-index: 1000;
 `;
 
-export const ModalContent = styled(motion.div)`
+export const ModalContent = styled.div`
+  background: white;
+  padding: ${({ theme }) => theme.spacing.lg};
+  border-radius: ${({ theme }) => theme.borderRadius.lg};
   position: relative;
   max-width: 90vw;
   max-height: 90vh;
-  border-radius: ${({ theme }) => theme.borderRadius.lg};
-  overflow: hidden;
-  background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export const ModalImage = styled.img`
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 80vh;
   object-fit: contain;
 `;
 
 export const ModalClose = styled.button`
   position: absolute;
-  top: ${({ theme }) => theme.spacing.md};
-  right: ${({ theme }) => theme.spacing.md};
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: ${({ theme }) => theme.colors.background};
-  color: ${({ theme }) => theme.colors.text};
-  font-size: ${({ theme }) => theme.typography.fontSize['2xl']};
-  font-weight: 300;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  top: ${({ theme }) => theme.spacing.sm};
+  right: ${({ theme }) => theme.spacing.sm};
+  background: none;
   border: none;
-  box-shadow: ${({ theme }) => theme.shadows.md};
-  transition: all ${({ theme }) => theme.transitions.default};
-
+  font-size: ${({ theme }) => theme.typography.fontSize['2xl']};
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.text};
+  
   &:hover {
-    background-color: ${({ theme }) => theme.colors.error};
-    color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
-export const ModalCaption = styled.div`
-  padding: ${({ theme }) => theme.spacing.lg};
+export const ModalCaption = styled.p`
   text-align: center;
+  margin-top: ${({ theme }) => theme.spacing.md};
   font-size: ${({ theme }) => theme.typography.fontSize.lg};
-  font-weight: 300;
   color: ${({ theme }) => theme.colors.text};
-  background-color: ${({ theme }) => theme.colors.background};
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 `;
 
 export const ViewMoreButton = styled(motion.button)`
   display: block;
   margin: ${({ theme }) => theme.spacing['2xl']} auto 0;
   background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.background};
-  padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing['2xl']};
-  border-radius: ${({ theme }) => theme.borderRadius.md};
-  font-weight: 300;
-  cursor: pointer;
+  color: ${({ theme }) => theme.colors.darkBackground};
+  font-family: ${({ theme }) => theme.typography.fontFamily.primary};
+  font-size: ${({ theme }) => theme.typography.fontSize.base};
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 20px 60px;
   border: none;
-  transition: all ${({ theme }) => theme.transitions.default};
-  box-shadow: ${({ theme }) => theme.shadows.md};
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.accent};
+    transform: translateY(-2px);
   }
 `;

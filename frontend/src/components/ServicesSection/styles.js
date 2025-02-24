@@ -13,10 +13,11 @@ export const ServicesContainer = styled.section`
 export const SectionTitle = styled.h2`
   text-align: center;
   font-size: ${({ theme }) => theme.typography.fontSize['4xl']};
-  font-weight: 300;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.typography.fontSize['3xl']};
@@ -28,10 +29,10 @@ export const ServicesDescription = styled.p`
   max-width: 800px;
   margin: 0 auto ${({ theme }) => theme.spacing['3xl']};
   font-size: ${({ theme }) => theme.typography.fontSize.xl};
-  font-weight: 300;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.text};
   line-height: 1.6;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.typography.fontSize.lg};
@@ -92,11 +93,12 @@ export const ServiceIcon = styled.div`
 
 export const ServiceTitle = styled.h3`
   font-size: ${({ theme }) => theme.typography.fontSize['2xl']};
-  font-weight: 300;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: ${({ theme }) => theme.spacing.lg};
   transition: all ${({ theme }) => theme.transitions.slow};
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
 
   ${ServiceCard}:hover & {
     color: ${({ theme }) => theme.colors.accent};
@@ -104,28 +106,35 @@ export const ServiceTitle = styled.h3`
 `;
 
 export const ServiceDescription = styled.p`
-  font-size: ${({ theme }) => theme.typography.fontSize.base};
-  font-weight: 300;
+  font-size: ${({ theme }) => theme.typography.fontSize.lg};
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.text};
   line-height: 1.6;
   margin-bottom: ${({ theme }) => theme.spacing['3xl']};
   flex-grow: 1;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 `;
 
 export const LearnMoreButton = styled(motion.button)`
-  background-color: transparent;
-  color: ${({ theme }) => theme.colors.primary};
-  border: 2px solid ${({ theme }) => theme.colors.primary};
-  padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.xl};
-  border-radius: ${({ theme }) => theme.borderRadius.md};
-  font-weight: 300;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.darkBackground};
+  font-family: ${({ theme }) => theme.typography.fontFamily.primary};
+  font-size: ${({ theme }) => theme.typography.fontSize.base};
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 20px 60px;
+  border: none;
   cursor: pointer;
-  transition: all ${({ theme }) => theme.transitions.default};
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.accent};
+    transform: translateY(-2px);
   }
 `;
 
@@ -139,25 +148,32 @@ export const ContactInfo = styled.div`
 
   p {
     font-size: ${({ theme }) => theme.typography.fontSize.xl};
-    font-weight: 300;
+    font-weight: 600;
     color: ${({ theme }) => theme.colors.text};
     margin-bottom: ${({ theme }) => theme.spacing.lg};
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
 `;
 
 export const ContactButton = styled(motion.button)`
   background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.background};
-  padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing['2xl']};
-  border-radius: ${({ theme }) => theme.borderRadius.md};
-  font-weight: 300;
-  cursor: pointer;
+  color: ${({ theme }) => theme.colors.darkBackground};
+  font-family: ${({ theme }) => theme.typography.fontFamily.primary};
+  font-size: ${({ theme }) => theme.typography.fontSize.base};
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 20px 60px;
   border: none;
-  transition: all ${({ theme }) => theme.transitions.default};
-  box-shadow: ${({ theme }) => theme.shadows.md};
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.accent};
+    transform: translateY(-2px);
   }
 `;

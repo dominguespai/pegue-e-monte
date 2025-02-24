@@ -10,9 +10,7 @@ const GallerySection = () => {
     { src: '/images/galeria/PRINCESA/PRINCESA1.jpeg', alt: 'Decoração Princesa', category: 'Princesa' },
     { src: '/images/galeria/CHA_CASANOVA/CHACASANOVA.jpeg', alt: 'Chá Casa Nova', category: 'Chá Casa Nova' },
     { src: '/images/galeria/ANOS_DOURADO/ANOS1.jpeg', alt: 'Anos Dourados', category: 'Anos Dourados' },
-    { src: '/images/galeria/SABRINA/SABRINA1.jpeg', alt: 'Festa Sabrina', category: 'Personalizado' },
     { src: '/images/galeria/CONJUNTO_COBRE/COBRE1.jpeg', alt: 'Conjunto Cobre', category: 'Conjuntos' },
-    { src: '/images/galeria/MESAS_DOURADA/MESA1.jpeg', alt: 'Mesa Dourada', category: 'Mesas' },
     { src: '/images/galeria/VASOS_DOURADOS/VASOS1.jpeg', alt: 'Vasos Dourados', category: 'Acessórios' },
   ];
 
@@ -76,7 +74,7 @@ const GallerySection = () => {
           >
             <S.GalleryImage src={image.src} alt={image.alt} />
             <S.ImageOverlay>
-              <S.ImageCategory>{image.category}</S.ImageCategory>
+              <S.ImageTitle>{image.category}</S.ImageTitle>
             </S.ImageOverlay>
           </S.GalleryItem>
         ))}

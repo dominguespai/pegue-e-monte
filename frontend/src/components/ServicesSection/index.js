@@ -10,11 +10,6 @@ const ServicesSection = () => {
       description: 'Transformamos qualquer espaço com decorações personalizadas e tematizadas para seu evento.',
     },
     {
-      icon: '🪑',
-      title: 'Aluguel de Móveis',
-      description: 'Ampla variedade de móveis e acessórios para complementar a decoração do seu evento.',
-    },
-    {
       icon: '🎨',
       title: 'Design Personalizado',
       description: 'Criamos projetos únicos que refletem seu estilo e atendem às suas necessidades.',

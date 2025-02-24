@@ -32,23 +32,25 @@ export const HeroContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1440px;
+  max-width: 100%;
   width: 100%;
-  padding: 0 ${({ theme }) => theme.spacing['2xl']};
-  margin-top: ${({ theme }) => theme.spacing['4xl']};
-  padding-bottom: ${({ theme }) => theme.spacing['4xl']};
+  padding: ${({ theme }) => theme.spacing['5xl']};
+  margin: auto;
   text-align: center;
+  max-width: 1200px;
 `;
 
 export const Title = styled.h1`
   font-family: ${({ theme }) => theme.typography.fontFamily.primary};
-  font-size: clamp(2.5rem, 5vw, ${({ theme }) => theme.typography.fontSize['6xl']});
-  font-weight: 300;
+  font-size: 40pt;
+  font-weight: 900;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  line-height: 1.1;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-  letter-spacing: -1px;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+  margin: 0 auto;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease-out forwards;
@@ -64,13 +66,15 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.p`
   font-family: ${({ theme }) => theme.typography.fontFamily.secondary};
-  font-size: clamp(1.125rem, 2vw, ${({ theme }) => theme.typography.fontSize.xl});
-  font-weight: 300;
+  font-size: 30pt;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: ${({ theme }) => theme.spacing['4xl']};
   line-height: 1.6;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
   max-width: 800px;
+  margin: 0 auto;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease-out forwards;
@@ -95,7 +99,7 @@ export const CTAButton = styled.button`
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease-out forwards;
   animation-delay: 0.6s;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
 
   &:hover {
     color: ${({ theme }) => theme.colors.background};
@@ -121,7 +125,7 @@ export const ScrollIndicator = styled.div`
   opacity: 0;
   animation: fadeIn 1s ease-out forwards 1.2s;
   z-index: 10;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
 
   @keyframes fadeIn {
     to {

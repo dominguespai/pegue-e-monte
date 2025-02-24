@@ -55,18 +55,14 @@ const HeroSection = () => {
             as={motion.h1}
             variants={fadeInVariants}
           >
-            Transforme seus eventos em
-            <br />
-            momentos inesquecíveis
+            Transforme seus eventos em momentos inesquecíveis
           </S.Title>
           
           <S.Subtitle
             as={motion.p}
             variants={fadeInVariants}
           >
-            Decorações personalizadas para festas e eventos que encantam e surpreendem.
-            <br />
-            Aluguel de móveis e acessórios para criar o ambiente perfeito para sua celebração.
+            Aluguel de acessórios para criar o ambiente perfeito para sua celebração.
           </S.Subtitle>
           
           <motion.div variants={fadeInVariants}>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebookF, faPinterestP, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import * as S from './styles';
 
 const Footer = () => {
@@ -37,7 +39,7 @@ const Footer = () => {
         <S.FooterSection variants={itemVariants}>
           <S.FooterLogo>Pegue e Monte</S.FooterLogo>
           <S.FooterDescription>
-            Transformando seus eventos em momentos inesquecíveis com decorações exclusivas e serviços personalizados.
+            Transformando seus eventos em momentos inesquecíveis com decorações exclusivas e serviços personalizados
           </S.FooterDescription>
         </S.FooterSection>
 
@@ -69,44 +71,50 @@ const Footer = () => {
           </S.FooterLinks>
         </S.FooterSection>
 
-        <S.FooterSection variants={itemVariants}>
-          <S.FooterTitle>Redes Sociais</S.FooterTitle>
-          <S.SocialLinks>
-            <S.SocialLink
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Instagram
-            </S.SocialLink>
-            <S.SocialLink
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Facebook
-            </S.SocialLink>
-            <S.SocialLink
-              href="https://pinterest.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Pinterest
-            </S.SocialLink>
-          </S.SocialLinks>
-        </S.FooterSection>
       </S.FooterContent>
 
       <S.FooterBottom
         as={motion.div}
         variants={itemVariants}
       >
+        <S.SocialLinks>
+          <S.SocialLink
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FontAwesomeIcon icon={faInstagram} size="lg" />
+          </S.SocialLink>
+          <S.SocialLink
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FontAwesomeIcon icon={faFacebookF} size="lg" />
+          </S.SocialLink>
+          <S.SocialLink
+            href="https://pinterest.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FontAwesomeIcon icon={faPinterestP} size="lg" />
+          </S.SocialLink>
+          <S.SocialLink
+            href="https://wa.me/5511999999999"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FontAwesomeIcon icon={faWhatsapp} size="lg" />
+          </S.SocialLink>
+        </S.SocialLinks>
         <S.Copyright>
           © {currentYear} Pegue e Monte. Todos os direitos reservados.
         </S.Copyright>

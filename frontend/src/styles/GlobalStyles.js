@@ -19,13 +19,16 @@ const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, nav a {
     font-family: ${({ theme }) => theme.typography.fontFamily.primary};
     font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
     line-height: ${({ theme }) => theme.typography.lineHeight.tight};
     margin-bottom: ${({ theme }) => theme.spacing.lg};
+    letter-spacing: 3px;
   }
 
   p {

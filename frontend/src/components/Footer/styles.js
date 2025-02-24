@@ -33,26 +33,26 @@ export const FooterSection = styled(motion.div)`
 
 export const FooterLogo = styled.h3`
   font-size: ${({ theme }) => theme.typography.fontSize['2xl']};
-  font-weight: 300;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.primary};
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 `;
 
 export const FooterDescription = styled.p`
-  font-size: ${({ theme }) => theme.typography.fontSize.base};
-  font-weight: 300;
+  font-size: ${({ theme }) => theme.typography.fontSize.lg};
+  font-weight: 600;
   line-height: 1.6;
   opacity: 0.9;
   color: ${({ theme }) => theme.colors.text};
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 `;
 
 export const FooterTitle = styled.h4`
   font-size: ${({ theme }) => theme.typography.fontSize.xl};
-  font-weight: 300;
+  font-weight: 600;
   margin-bottom: ${({ theme }) => theme.spacing.md};
   color: ${({ theme }) => theme.colors.primary};
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 `;
 
 export const ContactList = styled.ul`
@@ -65,10 +65,10 @@ export const ContactItem = styled.li`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.md};
-  font-size: ${({ theme }) => theme.typography.fontSize.base};
-  font-weight: 300;
+  font-size: ${({ theme }) => theme.typography.fontSize.lg};
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.text};
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 `;
 
 export const ContactIcon = styled.span`
@@ -85,11 +85,11 @@ export const FooterLinks = styled.div`
 export const FooterLink = styled.a`
   color: ${({ theme }) => theme.colors.text};
   text-decoration: none;
-  font-size: ${({ theme }) => theme.typography.fontSize.base};
-  font-weight: 300;
+  font-size: ${({ theme }) => theme.typography.fontSize.lg};
+  font-weight: 600;
   transition: opacity ${({ theme }) => theme.transitions.default};
   opacity: 0.9;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
   &:hover {
     opacity: 1;
@@ -100,24 +100,37 @@ export const FooterLink = styled.a`
 
 export const SocialLinks = styled.div`
   display: flex;
-  gap: ${({ theme }) => theme.spacing.lg};
+  gap: ${({ theme }) => theme.spacing.md};
+  margin-bottom: ${({ theme }) => theme.spacing.lg};
 `;
 
 export const SocialLink = styled(motion.a)`
-  color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.darkBackground};
+  font-family: ${({ theme }) => theme.typography.fontFamily.primary};
+  font-size: ${({ theme }) => theme.typography.fontSize.xs};
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 16px;
+  min-width: auto;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: ${({ theme }) => theme.borderRadius.full};
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
   text-decoration: none;
-  font-size: ${({ theme }) => theme.typography.fontSize.base};
-  font-weight: 300;
-  padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.md};
-  border: 1px solid ${({ theme }) => theme.colors.primary};
-  border-radius: ${({ theme }) => theme.borderRadius.md};
-  transition: all ${({ theme }) => theme.transitions.default};
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.background};
-    text-shadow: none;
+    background-color: ${({ theme }) => theme.colors.accent};
+    transform: translateY(-2px);
   }
 `;
 
@@ -126,12 +139,17 @@ export const FooterBottom = styled.div`
   padding: ${({ theme }) => theme.spacing.xl} 0;
   text-align: center;
   background-color: rgb(240, 248, 250);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.xl};
 `;
 
+
 export const Copyright = styled.p`
-  font-size: ${({ theme }) => theme.typography.fontSize.sm};
-  font-weight: 300;
+  font-size: ${({ theme }) => theme.typography.fontSize.base};
+  font-weight: 600;
   opacity: 0.9;
   color: ${({ theme }) => theme.colors.text};
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 `;

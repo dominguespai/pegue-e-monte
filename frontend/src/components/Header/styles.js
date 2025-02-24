@@ -23,13 +23,13 @@ export const HeaderContent = styled.div`
 
 export const Logo = styled.a`
   font-family: ${({ theme }) => theme.typography.fontFamily.primary};
-  font-size: ${({ theme }) => theme.typography.fontSize.xl};
-  font-weight: 300;
+  font-size: ${({ theme }) => theme.typography.fontSize['2xl']};
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.primary};
   transition: color ${({ theme }) => theme.transitions.default};
   text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
 
   &:hover {
     color: ${({ theme }) => theme.colors.accent};
@@ -105,15 +105,15 @@ export const MenuItem = styled.li`
 
 export const MenuLink = styled.a`
   font-family: ${({ theme }) => theme.typography.fontFamily.primary};
-  font-size: ${({ theme }) => theme.typography.fontSize.sm};
-  font-weight: 300;
+  font-size: ${({ theme }) => theme.typography.fontSize.base};
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.primary};
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   transition: all ${({ theme }) => theme.transitions.default};
   padding: ${({ theme }) => theme.spacing.xs} 0;
   position: relative;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
 
   &::after {
     content: '';
